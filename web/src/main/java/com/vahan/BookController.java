@@ -4,6 +4,9 @@ package com.vahan;
  * Created by TCE\vahany on 4/12/17.
  */
 
+import javax.annotation.Resource;
+import javax.ejb.EJB;
+import javax.ejb.SessionContext;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -16,14 +19,13 @@ import java.util.Date;
 @RequestScoped
 public class BookController {
 
-    // ======================================
-    // =             Attributes             =
-    // ======================================
 
+    /*private Context ctx = new InitialContext();
+    private BookEJB bookEJB = (BookEJB) ctx.lookup("java:global/FirstEjbTest-services-1.0-SNAPSHOT/BookEJB");
+*/
+    @Inject
+    private BookEJB bookEJB;
 
-
-    Context ctx = new InitialContext();
-    BookEJB bookEJB = (BookEJB) ctx.lookup("java:global/FirstEjbTest-services-1.0-SNAPSHOT/BookEJB");
 
 
     /*@Inject

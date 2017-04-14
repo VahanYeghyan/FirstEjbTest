@@ -1,4 +1,5 @@
 package com.vahan;
+
 import javax.ejb.LocalBean;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
