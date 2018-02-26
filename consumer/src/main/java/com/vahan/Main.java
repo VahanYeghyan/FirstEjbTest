@@ -15,6 +15,7 @@ public class Main {
     public static void main(String[] args) throws NamingException {
 
         // Looks up the EJB
+        
         Context ctx = new InitialContext();
         BookEJBRemote bookEJB = (BookEJBRemote) ctx.lookup("java:global/FirstEjbTest-services-1.0-SNAPSHOT/BookEJB");
 
